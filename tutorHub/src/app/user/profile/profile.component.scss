@@ -1,0 +1,18 @@
+
+@import "../user.component.scss";
+.main {
+  margin-left: $nav-bar-width/2;
+  background-color: white;
+  min-height: 100%;
+}
+img{
+  padding-bottom: 10px;
+}
+input,textarea{
+  width: 250px;
+  margin-top: 20px;
+}
+.content {
+  max-width: $max-width;
+  margin:  auto;
+}

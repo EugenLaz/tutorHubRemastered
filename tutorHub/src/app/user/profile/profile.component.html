@@ -1,0 +1,46 @@
+<div class="main">
+  <div class="content">
+    <div class="container">
+      <h1>Edit Profile</h1>
+      <hr>
+      <div class="row align-items-center">
+        <!-- left column -->
+        <div class="text-center">
+          <div class="col">
+              <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+              <h6>Upload a different photo...</h6>
+          </div>
+        </div>
+          <!-- edit form column -->
+          <div class="col">
+            <h3>Personal info</h3>
+
+            <div>
+              <form class="form-horizontal" role="form">
+
+                <input type="text" class="form-control" id="name"  placeholder="Enter Full Name" [(ngModel)]="userInfo.name"
+                       name="name">
+
+                <input type="text" class="form-control" id="email" placeholder="Enter email" [(ngModel)]="userInfo.email"
+                       name="email">
+
+                <textarea type="password" class="form-control" id="personalInfo" placeholder="Enter personal Info" [(ngModel)]="userInfo.personalInfo"
+                          name="personalInfo" rows="2"></textarea>
+                <div class="text-center">
+                  <button class="btn btn-link" value="Submit" (click)="updateUserInfo()" >Save</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="col">
+            <div class="align-text-top">
+            <h3>Balance: {{userInfo.balance}}$</h3>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+// Colors
+$primary: #7d87a8;
+$primary-ultralight: mix(white, $primary, 65%);
+$primary-light: mix(white, $primary, 40%);
+$primary-dark: mix(black, $primary, 40%);
+$primary-ultradark: mix(black, $primary, 80%);
+$black: #333333;
+$white: #eeeeee;
+
+
+// Misc
+$max-width: 800px;
+
+
+$nav-bar-width: 300px;
+$bar-length: 28px;
+$bar-thickness: 4px;
+$nav-item-delay: 0.05s;
