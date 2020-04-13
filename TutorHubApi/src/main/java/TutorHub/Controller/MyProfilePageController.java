@@ -28,12 +28,14 @@ public class MyProfilePageController {
 
     @PostMapping(path="/updateProfile")
     public ResponseEntity updateInfo(@RequestBody String userJson) {
-        User user = parser.deserializeUser(userJson, Deserializers.UserInfo);
-        System.out.println(user);
-//        dao.saveUser(user);
+        User updatedValuesUser = parser.deserializeUser(userJson, Deserializers.UserInfo);
+        User user = dao.getByUserName(updatedValuesUser.getUsername());
+        user.merge(updatedValuesUser);
+        dao.saveUser(user);
         Gson gson = new Gson();
         return ResponseEntity.ok()
                 .body(gson.toJson(gson.toJson("Update Successful"),String.class));
     }
+
 
 }

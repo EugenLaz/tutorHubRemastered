@@ -1,9 +1,9 @@
 <h1 class="header" align="center">TutorHub</h1>
 <div class="text-center" align="center" >
   All you need is
-  <a routerLink="/login">connection</a> !
+  <a [routerLink]="['/welcome/login']">connection</a> !
 </div>
 <div class="btn-group-lg" align="center">
-  <a class="btn btn-default" [routerLink]="['/register']" [queryParams]="{userRole: 'student'}" role="button">Start as a student</a>
-  <a class="btn btn-default" [routerLink]="['/register']" [queryParams]="{userRole: 'student'}" role="button">Start as a tutor</a>
+  <a class="btn btn-default" [routerLink]="['/welcome/register']" [queryParams]="{userRole: 'student'}" role="button">Start as a student</a>
+  <a class="btn btn-default" [routerLink]="['/welcome/resigter']" [queryParams]="{userRole: 'student'}" role="button">Start as a tutor</a>
 </div>

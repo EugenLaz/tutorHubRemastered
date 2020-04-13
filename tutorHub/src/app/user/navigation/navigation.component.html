@@ -1,6 +1,7 @@
 <nav class="nav">
   <ul class="nav__list">
-    <li class="nav__item"><a href="#">Sriracha</a></li>
+    <li class="nav_header"><a [routerLink]="[{outlets: {userR: ['profile']}}]">My Profile</a></li>
+    <li class="nav__item"><a routerLink="/user/browseTutors">Browse Tutors</a></li>
     <li class="nav__item"><a href="#">Wolf Moon</a></li>
     <li class="nav__item"><a href="#">Raw Denim</a></li>
     <li class="nav__item"><a href="#">Mumblecore</a></li>
@@ -8,4 +9,3 @@
     <li class="nav__item"><a (click)="logout()" href="/">Logout</a></li>
   </ul>
 </nav>
-<p>navigation works!</p>

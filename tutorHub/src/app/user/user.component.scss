@@ -16,3 +16,15 @@ $nav-bar-width: 300px;
 $bar-length: 28px;
 $bar-thickness: 4px;
 $nav-item-delay: 0.05s;
+
+
+.main {
+  margin-left: $nav-bar-width/8;
+  background-color: white;
+  min-height: 100%;
+}
+
+.content {
+  max-width: $max-width;
+  margin:  auto;
+}

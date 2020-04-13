@@ -16,17 +16,41 @@ import { StartComponent } from './welcome/start/start.component';
 import {AlertModule} from 'ngx-bootstrap';
 import { HttpInterceptorServiceService } from './service/login/http-interceptor-service.service';
 import { UserComponent } from './user/user.component';
-import { ProfileComponent } from './user/profile/profile.component';
+import { ProfileComponent } from './user/Content/profile/profile.component';
 import { NavigationComponent } from './user/navigation/navigation.component';
+import { TutorsBrowseComponent } from './user/Content/tutors-browse/tutors-browse.component';
+import {RoutProtectionService} from './service/rout-protection/rout-protection.service';
 
 const appRouts: Routes = [
-  {path: 'login',
-  component: LoginComponent},
-  {path: 'register',
-  component: RegistrationComponent},
-  {path: '',
-  component: StartComponent
+  {path: 'welcome',
+  component: WelcomeComponent,
+  children: [
+    {path: '',
+     component: StartComponent
+     },
+    {path: 'login',
+      component: LoginComponent
+    },
+    {path: 'register',
+      component: RegistrationComponent
+    },
+    {path: '',
+      component: StartComponent
+    }
+  ]},
+  { path: 'user',
+    component: UserComponent,
+    canActivate: [RoutProtectionService],
+    children: [
+      {path: 'profile',
+       component: ProfileComponent,
+      },
+      { path: 'browseTutors',
+        component: TutorsBrowseComponent,
+      }]
   },
+  {path: '**',
+  redirectTo: '/welcome'}
 ];
 
 
@@ -41,6 +65,7 @@ const appRouts: Routes = [
     UserComponent,
     ProfileComponent,
     NavigationComponent,
+    TutorsBrowseComponent,
   ],
   imports: [
     RouterModule.forChild(appRouts),

@@ -30,7 +30,7 @@ export class LoginComponent {
       this.loginSuccess = true;
       this.successMessage = 'Login Successful.';
       this.loginRedirector.emitChildEvent(true);
-      this.router.navigate(['/']);
+      this.router.navigate(['/user/profile']);
     }, () => {
       this.invalidLogin = true;
       this.loginSuccess = false;

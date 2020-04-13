@@ -35,7 +35,7 @@ export class LoginService {
   }
 
   createBasicAuthToken(username: string, password: string) {
-    return 'Basic ' + window.btoa(username + ':' + password);
+    return 'Basic ' + window.btoa(username + ':' + password );
   }
 
   registerSuccessfulLogin(username, password) {

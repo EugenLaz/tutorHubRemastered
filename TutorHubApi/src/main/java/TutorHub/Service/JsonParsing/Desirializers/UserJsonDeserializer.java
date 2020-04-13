@@ -28,6 +28,7 @@ public class UserJsonDeserializer extends StdDeserializer<User> {
         result.setUsername( node.get("username").asText() );
         result.setEmail( node.get("email").asText() );
         result.setPassword( encoder.encode(node.get("password").asText()) );
+        System.out.println(encoder.encode(node.get("password").asText()));
         result.setRole(new UserRole( node.get("role").asText() ));
         return result;
     }
