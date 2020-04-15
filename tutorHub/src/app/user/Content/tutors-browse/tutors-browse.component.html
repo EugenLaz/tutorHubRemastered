@@ -1,1 +1,30 @@
-<p>tutors-browse works!</p>
+<div class="container">
+
+      <ul class="list-group pull-down" id="contact-list">
+
+        <li class="list-group-item" *ngFor="let tutor of tutors">
+          <hr>
+          <div class="row w-200" >
+            <div class="col-12 col-sm-6 col-md-3 px-0">
+              <img src="//placehold.it/100" class="rounded-circle mx-auto d-block img-fluid">
+            </div>
+            <div class="col-12 col-sm-6 col-md-9 text-sm-left text-center">
+              <span class="header">{{tutor.name}}</span>
+              <br>
+              <span class="text-muted">Rating: {{tutor.rating}}</span>
+              <br>
+<!--              <div class="text-info">-->
+<!--                <span class="text-primary">Info</span>-->
+
+                <span class="text-info">{{tutor.personalInfo}}</span>
+<!--              </div>-->
+            </div>
+          </div>
+<!--          <hr>-->
+        </li>
+
+
+      </ul>
+      <!--/contacts list-->
+
+</div>
