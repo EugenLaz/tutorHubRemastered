@@ -7,6 +7,9 @@ import TutorHub.Service.JsonParsing.Desirializers.UserJsonDeserializer;
 import TutorHub.Service.JsonParsing.MyJsonParser;
 import TutorHub.model.User;
 import com.google.gson.Gson;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +17,9 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RestController
 public class MyProfilePageController {
+
+    protected static final Logger profileLogger = LogManager.getLogger(MyProfilePageController.class);
+
 
     @Autowired
     UserDaoService dao;
@@ -33,6 +39,10 @@ public class MyProfilePageController {
         user.merge(updatedValuesUser);
         dao.saveUser(user);
         Gson gson = new Gson();
+
+        String message = user.getUsername() + "successfully changed his data!";
+        profileLogger.info(message);
+
         return ResponseEntity.ok()
                 .body(gson.toJson(gson.toJson("Update Successful"),String.class));
     }
