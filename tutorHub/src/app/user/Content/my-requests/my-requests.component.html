@@ -1,0 +1,31 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <!--    <th scope="col">Id</th>-->
+      <th scope="col">Tutor</th>
+      <th scope="col">Place</th>
+      <th scope="col">Price</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col"></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let request of requests">
+      <td>{{request.tutorID}}</td>
+      <td>{{request.place}}</td>
+      <td>{{request.pricePerHour}}</td>
+      <td>{{request.date}}</td>
+      <td>{{request.time}}</td>
+      <td>
+        <button class="btn btn-link" value="Submit" (click)="approve(request.requestID)">Approve</button>
+        <button class="btn btn-link" value="Submit" (click)="reject(request.requestID)">Reject</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+

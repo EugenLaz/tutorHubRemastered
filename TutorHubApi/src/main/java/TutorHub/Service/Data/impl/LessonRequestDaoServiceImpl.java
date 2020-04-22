@@ -19,8 +19,8 @@ public class LessonRequestDaoServiceImpl implements LessonRequestDaoService {
 
 
     @Override
-    public List<LessonRequest> findByUser(String username) {
-        return repository.findAllByUser(username);
+    public List<LessonRequest> findNewByUser(String username) {
+        return repository.findAllNewByUser(username);
     }
 
     @Override

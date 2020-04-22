@@ -3,12 +3,15 @@ package TutorHub.Controller;
 
 import TutorHub.Service.Data.UserDaoService;
 import TutorHub.model.User;
+import com.mysql.cj.x.protobuf.MysqlxCrud;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @CrossOrigin
@@ -19,14 +22,15 @@ public class TutorBrowseController {
     UserDaoService dao;
 
     @GetMapping("/loadTutors")
-    public Object[] loadTutors(@RequestParam(value = "firstTutorIndex") String first,
-                               @RequestParam(value = "lastTutorIndex")String second) {
+    public Object[] loadTutors(){
         List tutors = dao.getAllTutors();
-        int firstIndex = Integer.parseInt(first);
-        int secondIndex = Integer.parseInt(second);
-        if (secondIndex>=tutors.size())
-            secondIndex=tutors.size();
-        return tutors.subList(firstIndex, secondIndex).toArray();
+        //construction to simulate a tutor base
+        for(int i =0;i<20;i++){
+            tutors.add(tutors.get(0));
+            if(i==15)
+            tutors.add(tutors.get(1));
+        }
+        return tutors.toArray();
     }
 
 }

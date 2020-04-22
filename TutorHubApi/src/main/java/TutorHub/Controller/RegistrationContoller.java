@@ -2,13 +2,11 @@ package TutorHub.Controller;
 
 
 import TutorHub.Service.Data.UserDaoService;
-import TutorHub.Service.JsonParsing.Deserializers;
-import TutorHub.Service.JsonParsing.Desirializers.UserJsonDeserializer;
+import TutorHub.Service.JsonParsing.UserDeserializers;
 import TutorHub.Service.JsonParsing.MyJsonParser;
 import TutorHub.model.User;
 
 import com.google.gson.Gson;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +29,7 @@ public class RegistrationContoller {
     @PostMapping(path = "/register")
     public ResponseEntity register(@RequestBody String userJson) {
         System.out.println("from registerContoller");
-        User user = parser.deserializeUser(userJson, Deserializers.UserCredentials);
+        User user = parser.deserializeUser(userJson, UserDeserializers.UserCredentials);
         int registrationSuccessMarker = dao.checkIfUnique(user);
         String responseMessage=null;
         switch (registrationSuccessMarker){
@@ -42,7 +40,7 @@ public class RegistrationContoller {
                 responseMessage="The user with given Username already exits";
                 break;
             case 1:
-//                dao.saveUser(user);
+                dao.saveUser(user);
                 responseMessage="Registration successful";
             break;
         }

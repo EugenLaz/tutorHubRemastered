@@ -9,7 +9,7 @@ $white: #eeeeee;
 
 
 // Misc
-$max-width: 800px;
+$max-width: 100%;
 
 
 $nav-bar-width: 300px;
@@ -19,7 +19,7 @@ $nav-item-delay: 0.05s;
 
 
 .main {
-  margin-left: $nav-bar-width/8;
+  margin-left: $nav-bar-width;
   background-color: white;
   min-height: 100%;
 }

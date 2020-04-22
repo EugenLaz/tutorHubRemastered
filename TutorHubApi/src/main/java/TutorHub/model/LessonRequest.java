@@ -13,6 +13,22 @@ public class LessonRequest {
     private String place;
     private Date date;
     private Time time;
+
+    @Override
+    public String toString() {
+        return "LessonRequest{" +
+                "requestID=" + requestID +
+                ", pricePerHour=" + pricePerHour +
+                ", place='" + place + '\'' +
+                ", date=" + date +
+                ", time=" + time +
+                ", message='" + message + '\'' +
+                ", studentID='" + studentID + '\'' +
+                ", tutorID='" + tutorID + '\'' +
+                ", status='" + status + '\'' +
+                '}';
+    }
+
     private String message;
     private String studentID;
     private String tutorID;

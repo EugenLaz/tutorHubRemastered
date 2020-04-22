@@ -1,0 +1,26 @@
+<div class="container" align="center">
+<!--  <h2 >{{username}}</h2>-->
+  <div class="form-group">
+    <form>
+
+      <input type="text" class="form-control" id="price"  placeholder="Price"
+             name="price" [(ngModel)]="lessonRequest.price" >
+
+      <input type="text" class="form-control" id="place" placeholder="Place"
+             name="place" [(ngModel)]="lessonRequest.place">
+
+      <input type="date" class="form-control" id="date" placeholder="Date"
+             name="place" [(ngModel)]="lessonRequest.date">
+
+      <input type="time" class="form-control" id="time" placeholder="Time"
+             name="place" [(ngModel)]="lessonRequest.time">
+
+      <textarea type="text" class="form-control" id="message" placeholder="Message"
+                name="message" rows="2" [(ngModel)]="lessonRequest.message"></textarea>
+      <div>
+        <button class="btn btn-link" value="Submit" (click)="sendRequest()">Save</button>
+      </div>
+
+    </form>
+  </div>
+</div>

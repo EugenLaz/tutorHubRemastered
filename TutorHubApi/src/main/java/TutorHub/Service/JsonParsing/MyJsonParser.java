@@ -1,13 +1,12 @@
 package TutorHub.Service.JsonParsing;
 
-import TutorHub.Service.JsonParsing.Desirializers.UserInfoJsonDeserializer;
-import TutorHub.Service.JsonParsing.Desirializers.UserJsonDeserializer;
+import TutorHub.Service.JsonParsing.Desirializers.LessonRequestDeserializer;
+import TutorHub.model.LessonRequest;
 import TutorHub.model.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.InvocationTargetException;
@@ -15,7 +14,9 @@ import java.lang.reflect.InvocationTargetException;
 @Service
 public class MyJsonParser {
 
-    public User deserializeUser(String json, Deserializers deserializerType){
+
+    //When deserializing info to update and registation credentials we need different deserializers
+    public User deserializeUser(String json, UserDeserializers deserializerType){
         User user=null;
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -30,6 +31,19 @@ public class MyJsonParser {
         return user;
     }
 
-
+    public LessonRequest deserializeLesson(String json){
+        LessonRequest lessonRequest=null;
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            SimpleModule module = new SimpleModule();
+            StdDeserializer<LessonRequest> deserializer = new LessonRequestDeserializer();
+            module.addDeserializer(LessonRequest.class, deserializer);
+            mapper.registerModule(module);
+            lessonRequest = mapper.readValue(json, LessonRequest.class);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return lessonRequest;
+    }
 
 }

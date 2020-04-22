@@ -1,13 +1,10 @@
 package TutorHub.Controller;
 
 import TutorHub.Service.Data.UserDaoService;
-import TutorHub.Service.JsonParsing.Deserializers;
-import TutorHub.Service.JsonParsing.Desirializers.UserInfoJsonDeserializer;
-import TutorHub.Service.JsonParsing.Desirializers.UserJsonDeserializer;
+import TutorHub.Service.JsonParsing.UserDeserializers;
 import TutorHub.Service.JsonParsing.MyJsonParser;
 import TutorHub.model.User;
 import com.google.gson.Gson;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +31,7 @@ public class MyProfilePageController {
 
     @PostMapping(path="/updateProfile")
     public ResponseEntity updateInfo(@RequestBody String userJson) {
-        User updatedValuesUser = parser.deserializeUser(userJson, Deserializers.UserInfo);
+        User updatedValuesUser = parser.deserializeUser(userJson, UserDeserializers.UserInfo);
         User user = dao.getByUserName(updatedValuesUser.getUsername());
         user.merge(updatedValuesUser);
         dao.saveUser(user);

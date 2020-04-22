@@ -34,7 +34,6 @@ export class ProfileComponent implements OnInit {
 
   public updateUserInfo() {
     const url = 'http://localhost:8080/updateProfile';
-    alert(this.userInfo);
     this.http.post<string>(url, JSON.stringify(this.userInfo)).subscribe(
       res => {
         alert(res);

@@ -9,7 +9,7 @@ import java.util.List;
 
 
 public interface LessonRequestDaoService {
-    List<LessonRequest> findByUser(String username);
+    List<LessonRequest> findNewByUser(String username);
 
     void saveLessonRequest(LessonRequest user);
 
