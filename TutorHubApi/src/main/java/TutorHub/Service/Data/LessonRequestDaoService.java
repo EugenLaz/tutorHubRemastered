@@ -17,5 +17,6 @@ public interface LessonRequestDaoService {
 
     LessonRequest findById(long id);
 
-    List<LessonRequest> findAllApprovedByDate(String username, Date date);
+
+    List<LessonRequest> findAllApprovedAffterDate(String username,Date date);
 }

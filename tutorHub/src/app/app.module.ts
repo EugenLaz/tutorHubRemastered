@@ -25,6 +25,8 @@ import { LessonRequestComponent } from './user/Content/lesson-request/lesson-req
 import { MyRequestsComponent } from './user/Content/my-requests/my-requests.component';
 import { MyLessonsComponent } from './user/Content/my-lessons/my-lessons.component';
 import {TutorSearchPipe} from './service/filter-pipes/tutor-search.pipe';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 const appRouts: Routes = [
   {path: 'welcome',
@@ -94,7 +96,8 @@ const appRouts: Routes = [
     HttpClientModule,
     AlertModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

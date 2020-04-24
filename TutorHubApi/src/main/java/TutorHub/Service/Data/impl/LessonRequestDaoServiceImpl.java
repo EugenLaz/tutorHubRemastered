@@ -40,9 +40,11 @@ public class LessonRequestDaoServiceImpl implements LessonRequestDaoService {
         return repository.findById(id).get();
     }
 
+
+
     @Override
-    public List<LessonRequest> findAllApprovedByDate(String username, Date date) {
-        return repository.findApprovedByDate(username, date);
+    public List<LessonRequest> findAllApprovedAffterDate(String username, Date date) {
+        return repository.findApprovedAfterDate(username, date);
     }
 
 }

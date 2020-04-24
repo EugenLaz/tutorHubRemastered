@@ -12,8 +12,8 @@ public interface LessonRequestRepository extends JpaRepository<LessonRequest, Lo
     @Query("select b from LessonRequest b where (b.tutorID = :username or b.studentID=:username) and b.status='New'")
     List<LessonRequest> findAllNewByUser(@Param("username") String username);
 
-    @Query("select b from LessonRequest b where b.date = :date and b.studentID= :username and b.status='Approved'")
-    List<LessonRequest> findApprovedByDate(@Param("username") String username, @Param("date") Date date);
 
+    @Query("select b from LessonRequest b where b.date >= :date and b.studentID = :username and b.status='Approved'")
+    List<LessonRequest> findApprovedAfterDate(@Param("username") String username, @Param("date") Date date);
 
 }
