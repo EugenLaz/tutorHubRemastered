@@ -29,7 +29,7 @@ public class MyProfilePageController {
         return dao.getByUserName(user);
     }
 
-    @PostMapping(path="/updateProfile")
+    @GetMapping(path="/updateProfile")
     public ResponseEntity updateInfo(@RequestBody String userJson) {
         User updatedValuesUser = parser.deserializeUser(userJson, UserDeserializers.UserInfo);
         User user = dao.getByUserName(updatedValuesUser.getUsername());

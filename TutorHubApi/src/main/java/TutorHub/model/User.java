@@ -2,6 +2,7 @@ package TutorHub.model;
 
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class User {
     private String email;
     private String name;
     private String password;
-    private BigInteger balance;
+    private BigDecimal balance;
     private String personalInfo;
     private int rating;
     @ManyToMany(cascade = {
@@ -32,7 +33,7 @@ public class User {
     public User() {
         userRoles.add(new UserRole("default"));
         this.rating=0;
-        this.balance= BigInteger.valueOf(0);
+        this.balance= BigDecimal.valueOf(0);
     }
 
     @Override
@@ -71,7 +72,6 @@ public class User {
         this.setEmail(updatingValues.getEmail());
         this.setPersonalInfo(updatingValues.getPersonalInfo());
         this.setName(updatingValues.getName());
-        this.setBalance(updatingValues.getBalance());
     }
 
     public Set<UserRole> getUserRoles() {
@@ -92,7 +92,13 @@ public class User {
     public String getPersonalInfo() {
         return personalInfo;
     }
-    public BigInteger getBalance() {
+
+    public void updateBalance(BigDecimal balance) {
+        this.balance = this.balance.add(balance);
+    }
+
+
+    public BigDecimal getBalance() {
         return balance;
     }
     public int getRating() {
@@ -118,10 +124,6 @@ public class User {
     public void setRole(UserRole userRole) {
         if(userRole!=null)
         this.userRoles.add(userRole);
-    }
-    public void setBalance(BigInteger balance) {
-        if (balance!=null)
-        this.balance = balance;
     }
     public void setPersonalInfo(String personalInfo) {
         if (personalInfo!=null)

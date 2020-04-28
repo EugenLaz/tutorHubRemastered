@@ -46,16 +46,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().configurationSource(corsConfigurationSource()).and().csrf().
-                disable()
-                .authorizeRequests()
-                .antMatchers("/**","/register")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .httpBasic();
+//        http.cors().configurationSource(corsConfigurationSource()).and().csrf().
+//                disable()
+//                .authorizeRequests()
+//                .antMatchers("/**","/register")
+//                .permitAll()
+//                .anyRequest()
+//                .authenticated()
+//                .and()
+//                .httpBasic();
+        http.cors().configurationSource(corsConfigurationSource()).and().authorizeRequests()
+                .antMatchers("/**","/register").permitAll().anyRequest().authenticated().and()
+                .csrf().disable();
     }
+
+//    protected void oath2configure(HttpSecurity http) throws Exception{
+//        http.cors().configurationSource(corsConfigurationSource()).and().authorizeRequests()
+//                .antMatchers("/**","/register").permitAll().anyRequest().authenticated();
+//    }
 
 
     CorsConfigurationSource corsConfigurationSource() {

@@ -27,6 +27,7 @@ import { MyLessonsComponent } from './user/Content/my-lessons/my-lessons.compone
 import {TutorSearchPipe} from './service/filter-pipes/tutor-search.pipe';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { PaymentComponent } from './user/Content/payment/payment.component';
 
 const appRouts: Routes = [
   {path: 'welcome',
@@ -61,8 +62,12 @@ const appRouts: Routes = [
       {path: 'sendLessonRequest',
       component: LessonRequestComponent},
       {path: 'mySchedule',
-      component: MyLessonsComponent}
-      ]
+      component: MyLessonsComponent},
+      {
+        path: 'paymentPage',
+        component: PaymentComponent
+      }
+      ],
   },
   {path: '**',
   redirectTo: '/welcome'}
@@ -85,6 +90,7 @@ const appRouts: Routes = [
     LessonRequestComponent,
     MyRequestsComponent,
     MyLessonsComponent,
+    PaymentComponent,
   ],
   imports: [
     RouterModule.forChild(appRouts),

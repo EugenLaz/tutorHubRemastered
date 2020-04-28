@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {LoginService} from '../../../service/login/login.service';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-profile',
@@ -49,6 +50,7 @@ export class ProfileComponent implements OnInit {
     }
     return result;
   }
+
 }
 
 export interface UserInfo {

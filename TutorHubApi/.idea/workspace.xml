@@ -17,24 +17,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/ScheduleContoller.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/PayPallContoller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="49" column="82" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="82" />
+            <state relative-caret-position="328">
+              <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#Response#0;class#ScheduleContoller#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Funds/PayPalClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Funds/PaymentProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/LessonRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/LessonRequestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="133">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,12 +75,66 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/TutorBrowseController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/LessonRequestDaoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/LessonRequestDaoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+              <folding>
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/UserDaoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-121">
+              <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+              <folding>
+                <element signature="method#equals#0;class#User#0" />
+                <element signature="method#merge#0;class#User#0" />
+                <element signature="e#2690#2691#0" expanded="true" />
+                <element signature="e#2746#2747#0" expanded="true" />
+                <element signature="method#setPassword#0;class#User#0" />
+                <element signature="method#setUsername#0;class#User#0" />
+                <element signature="method#setName#0;class#User#0" />
+                <element signature="method#setEmail#0;class#User#0" />
+                <element signature="method#setRole#0;class#User#0" />
+                <element signature="method#setPersonalInfo#0;class#User#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/MyProfilePageController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+              <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +162,11 @@
       <find>BC</find>
       <find>User(</find>
       <find>rating</find>
+      <find>Amoun</find>
+      <find>payment</find>
+      <find>Balance</find>
+      <find>appe</find>
+      <find>userDao</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,12 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/model/AuthBean.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/app.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/SecurityDetailsHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/SecurityDetailsHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/UserDetailsImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/AuthProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/MyUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/MyUserDetailsService.java" />
@@ -98,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/UserDaoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/Repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/UserDaoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/PasswordEncoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/MyUserDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/UserToUserDetailsConverter.java" />
@@ -109,23 +193,17 @@
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/UserJsonParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Desirializers/UserJsonParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Desirializers/UserInfoDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/AuthenticationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/asd.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Desirializers/UserInfoJsonDeserializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Desirializers/UserJsonDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/EventListeners/AuthenticationApplicationListener.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/MyProfilePageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/RegistrationContoller.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Deserializers.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/UserDeserializers.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/MyJsonParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/model/LessonRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Desirializers/LessonRequestDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/TutorBrowseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/BTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Cities.txt" />
@@ -133,8 +211,21 @@
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/LessonRequestDaoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/Repository/LessonRequestRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/LessonRequestDaoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/LessonRequestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/ScheduleContoller.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/model/PayPallPayment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/TutorBrowseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/AuthenticationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/MyProfilePageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/PayPallContoller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/model/PayPalClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/PayPalClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Funds/PaymentProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Funds/PayPalClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Controller/LessonRequestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/UserDaoServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -239,14 +330,24 @@
               <item name="TutorHubApi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorHub" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+              <item name="Funds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorHubApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorHubApi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,12 +538,25 @@
       <workItem from="1587630411312" duration="203000" />
       <workItem from="1587640675035" duration="5475000" />
       <workItem from="1587658095984" duration="3087000" />
-      <workItem from="1587711594355" duration="980000" />
+      <workItem from="1587711594355" duration="8812000" />
+      <workItem from="1587720964685" duration="2389000" />
+      <workItem from="1587724365227" duration="4698000" />
+      <workItem from="1587729431641" duration="280000" />
+      <workItem from="1587732260502" duration="3637000" />
+      <workItem from="1587740109200" duration="5624000" />
+      <workItem from="1587750783456" duration="477000" />
+      <workItem from="1587812015892" duration="768000" />
+      <workItem from="1587879867816" duration="1628000" />
+      <workItem from="1587881854121" duration="793000" />
+      <workItem from="1587929954357" duration="1744000" />
+      <workItem from="1587981572118" duration="5269000" />
+      <workItem from="1587991635256" duration="6932000" />
+      <workItem from="1588067970864" duration="6822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160809000" />
+    <option name="totallyTimeSpent" value="209702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -457,7 +571,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.25587043" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.31902835" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.2769231" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -467,7 +581,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49878544" visible="true" weight="0.38543516" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49878544" weight="0.41563055" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -532,77 +646,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/PayPallContoller.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/StandardWrapperValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="296" selection-start-line="296" selection-end-line="296" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/StandardContextValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/authenticator/AuthenticatorBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="326" selection-start-line="326" selection-end-line="326" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/StandardHostValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/valves/ErrorReportValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/StandardEngineValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/connector/CoyoteAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="436" selection-start-line="436" selection-end-line="436" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/coyote/http11/Http11Processor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -634,13 +690,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/SuccessHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/SecurityConfig.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/TutorHubStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/UserPageLoading.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/asd.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/MyUserDetails.java">
@@ -653,43 +702,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding>
-            <element signature="method#equals#0;class#User#0" />
-            <element signature="method#toString#0;class#User#0" />
-            <element signature="method#merge#0;class#User#0" />
-            <element signature="method#setPassword#0;class#User#0" />
-            <element signature="method#setUsername#0;class#User#0" />
-            <element signature="method#setName#0;class#User#0" />
-            <element signature="method#setEmail#0;class#User#0" />
-            <element signature="method#setRole#0;class#User#0" />
-            <element signature="method#setBalance#0;class#User#0" />
-            <element signature="method#setPersonalInfo#0;class#User#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/MyUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/EventListeners/AuthenticationApplicationListener.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/DataConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -704,34 +717,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="76" column="37" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/LessonRequestStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Desirializers/UserInfoJsonDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/AuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -779,29 +768,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/AuthBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/RegistrationContoller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/MyProfilePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,37 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/LessonRequestDaoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/UserDaoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/LessonRequestDaoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/LessonRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/JsonParsing/Desirializers/UserJsonDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -854,33 +793,230 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/TutorBrowseController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/ScheduleContoller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="578">
+          <caret line="49" column="82" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#Response#0;class#ScheduleContoller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/TutorHubStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/rest-api-sdk/1.14.0/rest-api-sdk-1.14.0.jar!/com/paypal/api/payments/Amount.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/rest-api-sdk/1.14.0/rest-api-sdk-1.14.0.jar!/com/paypal/base/rest/PayPalModel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/rest-api-sdk/1.14.0/rest-api-sdk-1.14.0.jar!/com/paypal/api/payments/CartBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/rest-api-sdk/1.14.0/rest-api-sdk-1.14.0.jar!/com/paypal/api/payments/TransactionBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/rest-api-sdk/1.14.0/rest-api-sdk-1.14.0.jar!/com/paypal/api/payments/Transaction.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/MyUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/AuthBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Configuration/Security/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/TutorBrowseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/AuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/LessonRequestStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/LessonRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+          <folding>
+            <element signature="method#equals#0;class#User#0" />
+            <element signature="method#merge#0;class#User#0" />
+            <element signature="e#2690#2691#0" expanded="true" />
+            <element signature="e#2746#2747#0" expanded="true" />
+            <element signature="method#setPassword#0;class#User#0" />
+            <element signature="method#setUsername#0;class#User#0" />
+            <element signature="method#setName#0;class#User#0" />
+            <element signature="method#setEmail#0;class#User#0" />
+            <element signature="method#setRole#0;class#User#0" />
+            <element signature="method#setPersonalInfo#0;class#User#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Funds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/MyProfilePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/PayPallContoller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Funds/PaymentProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Funds/PayPalClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/LessonRequestDaoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/UserDaoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Service/Data/impl/LessonRequestDaoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/LessonRequestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="133">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TutorHub/Controller/ScheduleContoller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="49" column="82" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#Response#0;class#ScheduleContoller#0" />
           </folding>
         </state>
       </provider>

@@ -17,10 +17,5 @@ public class AuthenticationController {
         return new AuthBean("You are authenticated");
     }
 
-    @RequestMapping(path = "/testOFWork")
-    public AuthBean checkOfLogOut(){
-        System.out.println("worked");
-        return new AuthBean("worked");
-    }
 
 }
