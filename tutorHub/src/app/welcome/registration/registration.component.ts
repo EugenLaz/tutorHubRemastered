@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {FormBuilder, FormControl, FormGroup, NgModel, ValidationErrors, ValidatorFn, Validators} from '@angular/forms';
 import {HttpClient, HttpParams} from '@angular/common/http';
@@ -45,17 +45,21 @@ export class RegistrationComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   submit() {
     const url = 'http://localhost:8080/register';
     if (this.loginForm.valid) {
       this.http.post<string>(url, JSON.stringify(this.model)).subscribe(
-        res => { alert(res); } );
+        res => {
+          alert(res);
+        });
     }
   }
 
 }
+
 export interface MyUser {
   username: string;
   email: string;
@@ -67,5 +71,5 @@ export interface MyUser {
 export const passwordsMatchValidator: ValidatorFn = (control: FormGroup): ValidationErrors | null => {
   const confirmPassword = control.get('confirmPassword');
   const password = control.get('password');
-  return password && confirmPassword && password.value === confirmPassword.value ? null : { confirmNotMatches: true };
+  return password && confirmPassword && password.value === confirmPassword.value ? null : {confirmNotMatches: true};
 };

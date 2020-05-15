@@ -21,7 +21,7 @@ public class PayPallContoller {
     }
 
     @GetMapping(value = "/complete/payment")
-    public Map<String, Object> completePayment(HttpServletRequest request){
+    public Map<String, Object> completePayment(HttpServletRequest request) {
         return payPalClient.completePayment(request);
     }
 

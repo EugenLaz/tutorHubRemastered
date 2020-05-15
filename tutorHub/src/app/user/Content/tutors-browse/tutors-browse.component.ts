@@ -12,9 +12,11 @@ export class TutorsBrowseComponent implements OnInit {
 
   tutors: Tutor[] = [];
   page = 0;
-  @Input() searchValue = ''  ;
+  @Input() searchValue = '';
   @Output() searchModelChange: EventEmitter<any> = new EventEmitter();
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit(): void {
     this.loadTutors();
@@ -23,7 +25,7 @@ export class TutorsBrowseComponent implements OnInit {
   public loadTutors() {
     const url = 'http://localhost:8080/loadTutors';
     this.http.get<Tutor[]>(url).pipe(
-      map(tutors => tutors.map(({ name, rating, personalInfo, username }) => ({ name, rating, personalInfo, username }))),
+      map(tutors => tutors.map(({name, rating, personalInfo, username}) => ({name, rating, personalInfo, username}))),
     )
       .subscribe(tutors => {
         console.log(tutors);
@@ -39,6 +41,7 @@ export class TutorsBrowseComponent implements OnInit {
 
 
 }
+
 export interface Tutor {
   name: string;
   rating: number;

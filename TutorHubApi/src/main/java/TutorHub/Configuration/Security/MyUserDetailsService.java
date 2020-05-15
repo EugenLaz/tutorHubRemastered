@@ -1,6 +1,5 @@
 package TutorHub.Configuration.Security;
 
-import TutorHub.Service.Data.Repository.UserRepository;
 import TutorHub.Service.Data.UserDaoService;
 import TutorHub.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,9 @@ import org.springframework.transaction.annotation.Transactional;
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
+    UserDaoService userDao;
+    @Autowired
     private Converter<User, UserDetails> userToDetailsConverter;
-
-    @Autowired UserDaoService userDao;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

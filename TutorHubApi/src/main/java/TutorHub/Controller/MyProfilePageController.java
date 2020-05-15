@@ -1,8 +1,8 @@
 package TutorHub.Controller;
 
 import TutorHub.Service.Data.UserDaoService;
-import TutorHub.Service.JsonParsing.UserDeserializers;
 import TutorHub.Service.JsonParsing.MyJsonParser;
+import TutorHub.Service.JsonParsing.UserDeserializers;
 import TutorHub.model.User;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
@@ -29,7 +29,7 @@ public class MyProfilePageController {
         return dao.getByUserName(user);
     }
 
-    @GetMapping(path="/updateProfile")
+    @GetMapping(path = "/updateProfile")
     public ResponseEntity updateInfo(@RequestBody String userJson) {
         User updatedValuesUser = parser.deserializeUser(userJson, UserDeserializers.UserInfo);
         User user = dao.getByUserName(updatedValuesUser.getUsername());
@@ -41,9 +41,8 @@ public class MyProfilePageController {
         profileLogger.info(message);
 
         return ResponseEntity.ok()
-                .body(gson.toJson(gson.toJson("Update Successful"),String.class));
+                .body(gson.toJson(gson.toJson("Update Successful"), String.class));
     }
-
 
 
 }

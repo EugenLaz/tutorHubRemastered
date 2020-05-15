@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {map} from 'rxjs/operators';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
@@ -12,6 +12,7 @@ import {LoginService} from '../../../service/login/login.service';
 export class PaymentComponent implements OnInit {
 
   sum: number;
+
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private loginService: LoginService) {
   }
 
@@ -22,8 +23,8 @@ export class PaymentComponent implements OnInit {
       const params = new HttpParams().set('paymentId', this.activatedRoute.snapshot.queryParamMap.get(`paymentId`))
         .set('PayerID', this.activatedRoute.snapshot.queryParamMap.get(`PayerID`))
         .set('userID', this.loginService.getLoggedInUserName());
-      alert(this.activatedRoute.snapshot.queryParamMap.get(`PayerID`))
-      alert(JSON.stringify(params))
+      alert(this.activatedRoute.snapshot.queryParamMap.get(`PayerID`));
+      alert(JSON.stringify(params));
       this.http.get<JSON>('http://localhost:8080/paypal/complete/payment', {params})
         .subscribe(res =>
           alert(JSON.stringify(res))
@@ -43,7 +44,7 @@ export class PaymentComponent implements OnInit {
 
   completePayment(paymentId, payerId) {
     const url = 'http://localhost:8080/';
-    return this.http.post(url + 'paypal/complete/payment?paymentId=' + paymentId + '&payerId=' + payerId , {})
+    return this.http.post(url + 'paypal/complete/payment?paymentId=' + paymentId + '&payerId=' + payerId, {})
       .pipe(map((response: Response) => console.log(JSON.stringify(response))));
   }
 

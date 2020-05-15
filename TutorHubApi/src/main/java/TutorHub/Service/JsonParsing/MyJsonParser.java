@@ -16,12 +16,12 @@ public class MyJsonParser {
 
 
     //When deserializing info to update and registation credentials we need different deserializers
-    public User deserializeUser(String json, UserDeserializers deserializerType){
-        User user=null;
+    public User deserializeUser(String json, UserDeserializers deserializerType) {
+        User user = null;
         try {
             ObjectMapper mapper = new ObjectMapper();
             SimpleModule module = new SimpleModule();
-            StdDeserializer<User> deserializer =  deserializerType.getType().getDeclaredConstructor().newInstance();
+            StdDeserializer<User> deserializer = deserializerType.getType().getDeclaredConstructor().newInstance();
             module.addDeserializer(User.class, deserializer);
             mapper.registerModule(module);
             user = mapper.readValue(json, User.class);
@@ -31,8 +31,8 @@ public class MyJsonParser {
         return user;
     }
 
-    public LessonRequest deserializeLesson(String json){
-        LessonRequest lessonRequest=null;
+    public LessonRequest deserializeLesson(String json) {
+        LessonRequest lessonRequest = null;
         try {
             ObjectMapper mapper = new ObjectMapper();
             SimpleModule module = new SimpleModule();

@@ -38,6 +38,7 @@ export class LessonRequestComponent implements OnInit {
         alert(res);
       });
   }
+
   ngOnInit(): void {
   }
 

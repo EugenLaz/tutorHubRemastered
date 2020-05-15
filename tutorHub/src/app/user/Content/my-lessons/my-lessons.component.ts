@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent, CalendarView} from 'angular-calendar';
 import {Subject} from 'rxjs';
 import {startOfDay, endOfDay, subDays, addDays, endOfMonth, isSameDay, isSameMonth, addHours} from 'date-fns';
@@ -25,8 +25,6 @@ const colors: any = {
 };
 
 
-
-
 @Component({
   selector: 'app-my-lessons',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -34,7 +32,7 @@ const colors: any = {
   styleUrls: ['./my-lessons.component.scss']
 })
 export class MyLessonsComponent {
-  @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
+  @ViewChild('modalContent', {static: true}) modalContent: TemplateRef<any>;
   view: CalendarView = CalendarView.Month;
   CalendarView = CalendarView;
   viewDate: Date = new Date();
@@ -43,8 +41,7 @@ export class MyLessonsComponent {
     event: CalendarEvent;
   };
   refresh: Subject<any> = new Subject();
-  events: CalendarEvent[] = [
-  ];
+  events: CalendarEvent[] = [];
   activeDayIsOpen = false;
 
 
@@ -55,17 +52,18 @@ export class MyLessonsComponent {
       const params = new HttpParams().set('username', username);
       this.http.get<CalendarEvent[]>(url, {params}).pipe(
         map(events => events.map(
-          ({ start, title}) =>
-          ({ start: addHours(startOfDay(new Date(start.toString())), new Date(start.toString()).getHours()), title }))))
+          ({start, title}) =>
+            ({start: addHours(startOfDay(new Date(start.toString())), new Date(start.toString()).getHours()), title}))))
         .subscribe(events => {
           console.log(events);
           this.events = events;
-          console.log(this.events); });
+          console.log(this.events);
+        });
     });
   }
 
 
-  dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
+  dayClicked({date, events}: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
       if (
         (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||

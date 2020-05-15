@@ -1,7 +1,6 @@
 package TutorHub.Service.Funds;
 
 import TutorHub.Service.Data.UserDaoService;
-import TutorHub.model.User;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -85,18 +83,16 @@ public class PayPalClient {
             Payment payment = Payment.get(context, req.getParameter("paymentId"));
             Payment executedPayment = payment.execute(context, paymentExecution);
             if (payment != null && executedPayment.getState().equals("approved")) {
-                System.out.println("FROM APPROVED");
                 String userAccountId = req.getParameter("userID");
                 Amount transactionAmount = executedPayment.getTransactions().get(0).getAmount();
-                paymentProcessor.depositFunds(userAccountId,Double.valueOf(transactionAmount.getTotal()));
+                paymentProcessor.depositFunds(userAccountId, Double.valueOf(transactionAmount.getTotal()));
                 response.put("status", "success");
                 response.put("message", "Your balance is updated");
             }
-        } catch (PayPalRESTException e ) {
+        } catch (PayPalRESTException e) {
             response.put("status", "error");
             response.put("message", e.getDetails().getName());
         }
-        System.out.println(response);
         return response;
     }
 

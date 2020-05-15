@@ -41,7 +41,6 @@ public class LessonRequestDaoServiceImpl implements LessonRequestDaoService {
     }
 
 
-
     @Override
     public List<LessonRequest> findAllApprovedAffterDate(String username, Date date) {
         return repository.findApprovedAfterDate(username, date);

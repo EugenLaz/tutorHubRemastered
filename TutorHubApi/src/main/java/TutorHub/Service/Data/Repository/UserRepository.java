@@ -1,7 +1,6 @@
 package TutorHub.Service.Data.Repository;
 
 import TutorHub.model.User;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -14,7 +13,7 @@ public interface UserRepository extends JpaRepository<User, String> {
     List<User> getAllTutors();
 
     @Query(value = "SELECT -1 FROM USERS u WHERE u.username= :username " +
-            "UNION select 0 FROM users u Where u.email = :email",nativeQuery = true)
-    List<Integer> checkIfExists(@Param("username")String name, @Param("email") String email);
+            "UNION select 0 FROM users u Where u.email = :email", nativeQuery = true)
+    List<Integer> checkIfExists(@Param("username") String name, @Param("email") String email);
 
 }

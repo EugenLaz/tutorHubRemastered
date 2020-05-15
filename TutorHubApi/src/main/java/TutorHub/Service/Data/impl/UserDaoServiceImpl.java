@@ -34,7 +34,6 @@ public class UserDaoServiceImpl implements UserDaoService {
 
     @Override
     public boolean saveUser(User user) {
-        System.out.println(user.toString());
         userRepository.save(user);
         return true;
     }
@@ -55,7 +54,7 @@ public class UserDaoServiceImpl implements UserDaoService {
         return userRepository.getAllTutors();
     }
 
-//    returns -1  if user with the given username exists in table
+    //    returns -1  if user with the given username exists in table
 //    returns 0 if user with the given email exists in table
     @Override
     public Integer checkIfUnique(User user) {
@@ -63,7 +62,7 @@ public class UserDaoServiceImpl implements UserDaoService {
         int result;
         resultSet = userRepository.checkIfExists(user.getUsername(), user.getEmail());
         if (resultSet.isEmpty()) result = 1;
-        else result=resultSet.get(0);
+        else result = resultSet.get(0);
         return result;
     }
 

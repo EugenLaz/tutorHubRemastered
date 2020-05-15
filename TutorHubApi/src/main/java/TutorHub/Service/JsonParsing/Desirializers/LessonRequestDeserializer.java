@@ -1,11 +1,8 @@
 package TutorHub.Service.JsonParsing.Desirializers;
 
 import TutorHub.Service.Data.LessonRequestDaoService;
-import TutorHub.Service.Data.UserDaoService;
 import TutorHub.model.LessonRequest;
-import TutorHub.model.User;
 import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;

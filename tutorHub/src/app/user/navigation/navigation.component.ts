@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LoginService} from '../../service/login/login.service';
 
 @Component({
@@ -8,7 +8,8 @@ import {LoginService} from '../../service/login/login.service';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService) {
+  }
 
   ngOnInit(): void {
   }

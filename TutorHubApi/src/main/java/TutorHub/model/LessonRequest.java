@@ -20,6 +20,10 @@ public class LessonRequest {
     private double lat;
     private double lng;
 
+    public LessonRequest() {
+        status = LessonRequestStatus.New.toString();
+    }
+
     public double getLat() {
         return lat;
     }
@@ -34,10 +38,6 @@ public class LessonRequest {
 
     public void setLng(double lng) {
         this.lng = lng;
-    }
-
-    public LessonRequest() {
-        status = LessonRequestStatus.New.toString();
     }
 
     @Override
@@ -89,8 +89,6 @@ public class LessonRequest {
     public void setPricePerHour(long pricePerHour) {
         this.pricePerHour = pricePerHour;
     }
-
-
 
 
     public String getMessage() {

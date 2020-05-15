@@ -24,6 +24,7 @@ export class LoginComponent {
     private loginRedirector: ReedirectorService,
     private authenticationService: LoginService) {
   }
+
   handleLogin() {
     this.authenticationService.authenticationService(this.username, this.password).subscribe((result) => {
       this.invalidLogin = false;

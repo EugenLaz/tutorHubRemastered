@@ -2,7 +2,6 @@ package TutorHub.Service.Data;
 
 import TutorHub.model.LessonRequest;
 import TutorHub.model.LessonRequestStatus;
-import TutorHub.model.User;
 
 import java.util.Date;
 import java.util.List;
@@ -18,5 +17,5 @@ public interface LessonRequestDaoService {
     LessonRequest findById(long id);
 
 
-    List<LessonRequest> findAllApprovedAffterDate(String username,Date date);
+    List<LessonRequest> findAllApprovedAffterDate(String username, Date date);
 }

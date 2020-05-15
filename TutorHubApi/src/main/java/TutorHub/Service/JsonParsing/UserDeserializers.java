@@ -9,11 +9,12 @@ public enum UserDeserializers {
     UserCredentials(UserJsonDeserializer.class);
 
     private final Class<? extends StdDeserializer> type;
-    private UserDeserializers(Class<? extends StdDeserializer> type) {
+
+    UserDeserializers(Class<? extends StdDeserializer> type) {
         this.type = type;
     }
 
-    public Class<? extends StdDeserializer> getType(){
+    public Class<? extends StdDeserializer> getType() {
         return this.type;
     }
 }

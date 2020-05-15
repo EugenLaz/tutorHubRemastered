@@ -1,27 +1,27 @@
 @import "../../user.component.scss";
 
-.list-group-item{
+.list-group-item {
   border: none;
 }
 
-.header{
+.header {
   font-weight: bold;
 }
 
-.container{
+.container {
   padding-top: 20px;
 }
-
 
 
 //Search
 /*** STYLES ***/
 
-.button-menu{
+.button-menu {
   position: absolute;
   bottom: 100px;
   right: 150px;
 }
+
 .search {
   position: absolute;
   margin: auto;
@@ -40,6 +40,7 @@
   &:hover {
     cursor: pointer;
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -54,6 +55,7 @@
     transform: rotate(45deg);
     transition: all .5s;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -69,6 +71,7 @@
     transition: all .5s;
   }
 }
+
 input {
   font-family: 'Inconsolata', monospace;
   position: absolute;
@@ -95,23 +98,28 @@ input {
   z-index: 5;
   font-weight: bolder;
   letter-spacing: 0.1em;
+
   &:hover {
     cursor: pointer;
   }
+
   &:focus {
     width: 300px;
     opacity: 1;
     cursor: text;
   }
+
   &:focus ~ .search {
     right: -525px;
     background: white;
     z-index: 6;
+
     &::before {
       top: 0;
       left: 0;
       width: 25px;
     }
+
     &::after {
       top: 0;
       left: 0;
@@ -123,6 +131,7 @@ input {
       transform: rotate(-45deg);
     }
   }
+
   &::placeholder {
     color: white;
     opacity: 0.5;
@@ -130,10 +139,10 @@ input {
   }
 }
 
-.pagination{
+.pagination {
   padding-left: 350px;
 }
 
-a{
+a {
   color: black;
 }

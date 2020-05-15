@@ -6,10 +6,10 @@ import TutorHub.model.AuthBean;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
 @RestController
@@ -20,20 +20,15 @@ public class AuthenticationController {
 
     @GetMapping(path = "/getRole")
     public ResponseEntity roleLoader(@RequestParam("username") String username) {
-        System.out.println(username);
-        String roles=userDao.getByUserName(username).getUserRoles().toString();
-        System.out.println(roles);
+        String roles = userDao.getByUserName(username).getUserRoles().toString();
         Gson gson = new Gson();
-        return ResponseEntity.ok().body(gson.toJson(roles,String.class));
+        return ResponseEntity.ok().body(gson.toJson(roles, String.class));
     }
 
     @GetMapping(path = "/basicauth")
     public AuthBean basicauth() {
-        System.out.println("worked");
         return new AuthBean("You are authenticated");
     }
-
-
 
 
 }

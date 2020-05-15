@@ -1,94 +1,100 @@
 <div class="form-group" align="center">
 
-    <h5 align="center">Registration</h5>
+  <h5 align="center">Registration</h5>
 
-<!--      <form #f='ngForm' (ngSubmit)="f.form.valid"  name="registrationForm" >-->
+  <!--      <form #f='ngForm' (ngSubmit)="f.form.valid"  name="registrationForm" >-->
 
-<!--        <input class="form-control" placeholder="UserName"  id="login" name="username"-->
-<!--               type="text" placeholder="Your name"-->
-<!--               [(ngModel)]="model.username"-->
-<!--               #username="ngModel" [ngClass]="{'is-invalid' : f.submitted && username.invalid}"-->
-<!--               required/>-->
+  <!--        <input class="form-control" placeholder="UserName"  id="login" name="username"-->
+  <!--               type="text" placeholder="Your name"-->
+  <!--               [(ngModel)]="model.username"-->
+  <!--               #username="ngModel" [ngClass]="{'is-invalid' : f.submitted && username.invalid}"-->
+  <!--               required/>-->
 
-<!--          <div *ngIf="f.submitted && username.invalid" class="invalid-input">-->
-<!--            <div *ngIf="username.errors?.required">Please enter username</div>-->
-<!--          </div>-->
-<!--        <input type="password" id="password" class="form-control" placeholder="Password" name="password"-->
-<!--               [(ngModel)]="model.password"-->
-<!--               #password="ngModel" [ngClass]="{'is-invalid' : f.submitted && password.invalid}"-->
-<!--                required/>-->
-<!--        <div *ngIf="f.submitted && password.invalid" class="invalid-input">-->
-<!--          <div *ngIf="password.errors?.required">Please enter password</div>-->
-<!--        </div>-->
-<!--        <input type="password" id="repeatedPassword" class="form-control" placeholder="Repeat Password" name="repeatedPassword"-->
-<!--               [(ngModel)]="model.repeatedPassword"-->
-<!--               #repeatedPassword="ngModel" [ngClass]="{'is-invalid' : f.submitted && repeatedPassword.invalid}"-->
-<!--               required />-->
-<!--        <div *ngIf="f.submitted && repeatedPassword.invalid " class="invalid-input">-->
-<!--          <div *ngIf="repeatedPassword.errors?.required">Please confirm your password</div>-->
-<!--        </div>-->
-<!--        <input type="text" id="email" class="form-control" placeholder="Email" name="email"-->
-<!--               [(ngModel)]="model.email"-->
-<!--               #email="ngModel" [ngClass]="{'is-invalid' : f.submitted && email.invalid}"-->
-<!--               required email/>-->
-<!--        <div *ngIf="f.submitted && email.invalid" class="invalid-input">-->
-<!--          &lt;!&ndash; individual validation errors &ndash;&gt;-->
-<!--          <div *ngIf="email.errors?.required">Field is required</div>-->
-<!--          <div *ngIf="email.errors?.email">Please enter a valid email</div>-->
-<!--        </div>-->
+  <!--          <div *ngIf="f.submitted && username.invalid" class="invalid-input">-->
+  <!--            <div *ngIf="username.errors?.required">Please enter username</div>-->
+  <!--          </div>-->
+  <!--        <input type="password" id="password" class="form-control" placeholder="Password" name="password"-->
+  <!--               [(ngModel)]="model.password"-->
+  <!--               #password="ngModel" [ngClass]="{'is-invalid' : f.submitted && password.invalid}"-->
+  <!--                required/>-->
+  <!--        <div *ngIf="f.submitted && password.invalid" class="invalid-input">-->
+  <!--          <div *ngIf="password.errors?.required">Please enter password</div>-->
+  <!--        </div>-->
+  <!--        <input type="password" id="repeatedPassword" class="form-control" placeholder="Repeat Password" name="repeatedPassword"-->
+  <!--               [(ngModel)]="model.repeatedPassword"-->
+  <!--               #repeatedPassword="ngModel" [ngClass]="{'is-invalid' : f.submitted && repeatedPassword.invalid}"-->
+  <!--               required />-->
+  <!--        <div *ngIf="f.submitted && repeatedPassword.invalid " class="invalid-input">-->
+  <!--          <div *ngIf="repeatedPassword.errors?.required">Please confirm your password</div>-->
+  <!--        </div>-->
+  <!--        <input type="text" id="email" class="form-control" placeholder="Email" name="email"-->
+  <!--               [(ngModel)]="model.email"-->
+  <!--               #email="ngModel" [ngClass]="{'is-invalid' : f.submitted && email.invalid}"-->
+  <!--               required email/>-->
+  <!--        <div *ngIf="f.submitted && email.invalid" class="invalid-input">-->
+  <!--          &lt;!&ndash; individual validation errors &ndash;&gt;-->
+  <!--          <div *ngIf="email.errors?.required">Field is required</div>-->
+  <!--          <div *ngIf="email.errors?.email">Please enter a valid email</div>-->
+  <!--        </div>-->
 
-<!--        <input class ="btn btn-link"value="Submit" name="lucky" type="submit"  (click)="submit()" id="btn_i">-->
+  <!--        <input class ="btn btn-link"value="Submit" name="lucky" type="submit"  (click)="submit()" id="btn_i">-->
 
-<!--      </form>-->
+  <!--      </form>-->
 
 
   <form [formGroup]="loginForm">
 
     <div class="form-group">
-      <input class="form-control" formControlName="username" [(ngModel)]="model.username" type="text" placeholder="Username"/>
+      <input class="form-control" formControlName="username" [(ngModel)]="model.username" type="text"
+             placeholder="Username"/>
     </div>
     <div class="error-messages">
-      <ng-container >
-        <div class="error-message" *ngIf="loginForm.get('username').hasError('required') && (loginForm.get('username').dirty || loginForm.get('username').touched)">
+      <ng-container>
+        <div class="error-message"
+             *ngIf="loginForm.get('username').hasError('required') && (loginForm.get('username').dirty || loginForm.get('username').touched)">
           Please Enter Username
         </div>
       </ng-container>
     </div>
 
 
-      <input class="form-control" formControlName="email" [(ngModel)]="model.email" type="text" placeholder="Email"/>
-      <ng-container>
-        <div class="error-message" *ngIf="loginForm.get('email').hasError('required') &&
+    <input class="form-control" formControlName="email" [(ngModel)]="model.email" type="text" placeholder="Email"/>
+    <ng-container>
+      <div class="error-message" *ngIf="loginForm.get('email').hasError('required') &&
           (loginForm.get('email').dirty || loginForm.get('email').touched)">
-          Please Enter Email
-        </div>
-        <div class="error-message" *ngIf="loginForm.get('email').hasError('email') &&
+        Please Enter Email
+      </div>
+      <div class="error-message" *ngIf="loginForm.get('email').hasError('email') &&
           (loginForm.get('email').dirty || loginForm.get('email').touched)">
-          Email Is Not Valid
-        </div>
-      </ng-container>
+        Email Is Not Valid
+      </div>
+    </ng-container>
 
 
-      <input class="form-control" formControlName="password" [(ngModel)]="model.password" type="password" placeholder="Password"/>
-      <ng-container>
-        <div class="error-message" *ngIf="loginForm.get('password').hasError('required') && (loginForm.get('password').dirty || loginForm.get('password').touched)">
-          Please Enter Password
-        </div>
-      </ng-container>
+    <input class="form-control" formControlName="password" [(ngModel)]="model.password" type="password"
+           placeholder="Password"/>
+    <ng-container>
+      <div class="error-message"
+           *ngIf="loginForm.get('password').hasError('required') && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+        Please Enter Password
+      </div>
+    </ng-container>
 
-      <input class="form-control" formControlName="confirmPassword" [(ngModel)]="model.repeatedPassword" type="password" placeholder="Repeat Your Password" />
-      <ng-container>
-        <div class="error-message" *ngIf="loginForm.errors?.confirmNotMatches && (loginForm.get('confirmPassword').dirty || loginForm.get('confirmPassword').touched)">
-          Passwords Don't match
-        </div>
-      </ng-container>
+    <input class="form-control" formControlName="confirmPassword" [(ngModel)]="model.repeatedPassword" type="password"
+           placeholder="Repeat Your Password"/>
+    <ng-container>
+      <div class="error-message"
+           *ngIf="loginForm.errors?.confirmNotMatches && (loginForm.get('confirmPassword').dirty || loginForm.get('confirmPassword').touched)">
+        Passwords Don't match
+      </div>
+    </ng-container>
 
-      <input class ="btn btn-link"value="Submit"  type="submit" (click)="submit()" id="btn_i">
+    <input class="btn btn-link" value="Submit" type="submit" (click)="submit()" id="btn_i">
 
   </form>
-<!--    <div class="btn-group">-->
-      <div class="btn btn-link" align="left" routerLink="/">Back</div>
+  <!--    <div class="btn-group">-->
+  <div class="btn btn-link" align="left" routerLink="/">Back</div>
 
-<!--    </div>-->
+  <!--    </div>-->
 
 </div>

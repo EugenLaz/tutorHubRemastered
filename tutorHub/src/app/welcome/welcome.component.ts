@@ -10,6 +10,7 @@ import {LoginService} from '../service/login/login.service';
 
 
 export class WelcomeComponent {
-  constructor() { }
+  constructor() {
+  }
 
 }
