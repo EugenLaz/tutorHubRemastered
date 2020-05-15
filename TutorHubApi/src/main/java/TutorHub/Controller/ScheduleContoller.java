@@ -68,6 +68,5 @@ public class ScheduleContoller {
         }
         String title;
         LocalDateTime start;
-
     }
 }

@@ -54,6 +54,7 @@ public class LessonRequestController {
 
     @GetMapping("/loadMyRequests")
     public Object[] loadRequests(@RequestParam(value = "username") String username) {
+
         return requestDao.findNewByUser(username).toArray();
     }
 

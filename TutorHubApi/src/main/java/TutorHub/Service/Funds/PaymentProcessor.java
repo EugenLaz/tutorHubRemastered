@@ -19,7 +19,8 @@ public class PaymentProcessor {
 
     public void withdrawFunds(String payerId, double amount){
         User payer = userDao.getByUserName(payerId);
-        if ( payer.getBalance().doubleValue() < amount){
+        if ( payer.getBalance().doubleValue()
+                < amount){
             throw new RuntimeException("Insufficient Funds");
         }
         else {

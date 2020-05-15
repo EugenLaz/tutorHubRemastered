@@ -3,7 +3,6 @@ package TutorHub.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -32,8 +31,8 @@ public class User {
 
     public User() {
         userRoles.add(new UserRole("default"));
-        this.rating=0;
-        this.balance= BigDecimal.valueOf(0);
+        this.rating = 0;
+        this.balance = BigDecimal.ZERO;
     }
 
     @Override
@@ -66,7 +65,7 @@ public class User {
                 '}';
     }
 
-    public void merge(User updatingValues){
+    public void merge(User updatingValues) {
         this.setUsername(updatingValues.getUsername());
         this.setPassword(updatingValues.getPassword());
         this.setEmail(updatingValues.getEmail());
@@ -77,59 +76,70 @@ public class User {
     public Set<UserRole> getUserRoles() {
         return userRoles;
     }
+
     public String getEmail() {
         return email;
     }
+
+    public void setEmail(String email) {
+        if (email != null)
+            this.email = email;
+    }
+
     public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        if (name != null)
+            this.name = name;
+    }
+
     public String getUsername() {
         return username;
     }
+
+    public void setUsername(String username) {
+        if (username != null)
+            this.username = username;
+    }
+
     public String getPassword() {
         return password;
     }
+
+    public void setPassword(String password) {
+        if (password != null)
+            this.password = password;
+    }
+
     public String getPersonalInfo() {
         return personalInfo;
+    }
+
+    public void setPersonalInfo(String personalInfo) {
+        if (personalInfo != null)
+            this.personalInfo = personalInfo;
     }
 
     public void updateBalance(BigDecimal balance) {
         this.balance = this.balance.add(balance);
     }
 
-
     public BigDecimal getBalance() {
         return balance;
     }
+
     public int getRating() {
         return rating;
     }
 
-    public void setPassword(String password) {
-        if (password!=null)
-        this.password = password;
-    }
-    public void setUsername(String username) {
-        if(username!=null)
-        this.username = username;
-    }
-    public void setName(String name) {
-        if(name!=null)
-        this.name = name;
-    }
-    public void setEmail(String email) {
-        if(email!=null)
-        this.email = email;
-    }
-    public void setRole(UserRole userRole) {
-        if(userRole!=null)
-        this.userRoles.add(userRole);
-    }
-    public void setPersonalInfo(String personalInfo) {
-        if (personalInfo!=null)
-        this.personalInfo = personalInfo;
-    }
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    public void setRole(UserRole userRole) {
+        if (userRole != null)
+            this.userRoles.add(userRole);
     }
 }
