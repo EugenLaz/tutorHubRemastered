@@ -4,24 +4,27 @@
     <tr>
       <!--    <th scope="col">Id</th>-->
       <th scope="col">Tutor</th>
-      <th scope="col">Place</th>
       <th scope="col">Price</th>
       <th scope="col">Date</th>
       <th scope="col">Time</th>
+      <th scope="col">Info</th>
       <th scope="col"></th>
-
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let request of requests">
       <td>{{request.tutorID}}</td>
-      <td>{{request.place}}</td>
+      <th scope="col"></th>
       <td>{{request.pricePerHour}}</td>
       <td>{{request.date}}</td>
       <td>{{request.time}}</td>
       <td>
-        <button class="btn btn-link" value="Submit" (click)="approve(request.requestID)">Approve</button>
-        <button class="btn btn-link" value="Submit" (click)="reject(request.requestID)">Reject</button>
+        <button class="btn btn-link" (click)="open(request)">More Info....</button>
+      </td>
+      <td>
+        <button class="btn btn-link" value="Submit" (click)="approve(request.requestID)" *ngIf=isTutor>Approve</button>
+        <button class="btn btn-link" value="Submit" (click)="reject(request.requestID)" *ngIf=isTutor>Reject</button>
+        <button class="btn btn-link" value="Submit" (click)="reject(request.requestID)" *ngIf=!isTutor>Cancel</button>
       </td>
 
     </tr>

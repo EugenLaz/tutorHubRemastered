@@ -7,13 +7,13 @@ import {BehaviorSubject} from 'rxjs';
 })
 export class LoginService {
   // BASE_PATH: 'http://localhost:8080'
-  USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser';
+  USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUserName';
+  USER_ROLE_SESSION_ATTRIBUTE_NAME = 'authenticatedUserRole';
+
   private childClickedEvent = new BehaviorSubject<boolean>(false);
 
   public username: string;
   public password: string;
-
-
 
   emitChildEvent(sucess: boolean) {
     this.childClickedEvent.next(sucess);
@@ -27,10 +27,12 @@ export class LoginService {
 
   authenticationService(username: string, password: string) {
     return this.http.get(`http://localhost:8080/basicauth`,
-      { headers: { authorization: this.createBasicAuthToken(username, password) } }).pipe(map((res) => {
-      this.username = username;
-      this.password = password;
-      this.registerSuccessfulLogin(username, password);
+      { headers: { authorization: this.createBasicAuthToken(username, password) } })
+      .pipe(map((res) => {
+        this.username = username;
+        this.password = password;
+        this.registerSuccessfulLogin(username);
+        this.registerSuccessfulRole(username);
     }));
   }
 
@@ -38,9 +40,14 @@ export class LoginService {
     return 'Basic ' + window.btoa(username + ':' + password );
   }
 
-  registerSuccessfulLogin(username, password) {
+  registerSuccessfulLogin(username) {
     sessionStorage.setItem(this.USER_NAME_SESSION_ATTRIBUTE_NAME, username);
   }
+  registerSuccessfulRole(username) {
+    this.http.get<string>('http://localhost:8080/getRole?username=' + username)
+      .subscribe(res => sessionStorage.setItem(this.USER_ROLE_SESSION_ATTRIBUTE_NAME, res));
+  }
+
 
   logout() {
     sessionStorage.removeItem(this.USER_NAME_SESSION_ATTRIBUTE_NAME);
@@ -59,6 +66,11 @@ export class LoginService {
 
   getLoggedInUserName() {
     const user = sessionStorage.getItem(this.USER_NAME_SESSION_ATTRIBUTE_NAME);
+    if (user === null) { return ''; }
+    return user;
+  }
+  getLoggedInUserRole() {
+    const user = sessionStorage.getItem(this.USER_ROLE_SESSION_ATTRIBUTE_NAME);
     if (user === null) { return ''; }
     return user;
   }

@@ -26,15 +26,16 @@ public class LessonRequestDeserializer extends StdDeserializer<LessonRequest> {
     }
 
     @Override
-    public LessonRequest deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
+    public LessonRequest deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         JsonNode node = jsonParser.getCodec().readTree(jsonParser);
         LessonRequest result = new LessonRequest();
-        result.setDate( Date.valueOf(node.get("date").asText()) );
-        result.setMessage( node.get("message").asText() );
-        result.setPlace( node.get("place").toString() );
-        result.setStudentID( node.get("studentId").asText() );
-        result.setTutuorID( node.get("tutorId").asText() );
-        result.setPricePerHour( node.get("price").asInt() );
+        result.setDate(Date.valueOf(node.get("date").asText()));
+        result.setMessage(node.get("message").asText());
+        result.setLat(node.get("lat").asDouble());
+        result.setLng(node.get("lng").asDouble());
+        result.setStudentID(node.get("studentId").asText());
+        result.setTutuorID(node.get("tutorId").asText());
+        result.setPricePerHour(node.get("price").asInt());
         result.setTime(Time.valueOf(LocalTime.parse(node.get("time").asText())));
         return result;
     }

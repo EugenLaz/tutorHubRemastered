@@ -1,26 +1,30 @@
-<div class="container" align="center">
-<!--  <h2 >{{username}}</h2>-->
-  <div class="form-group">
-    <form>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col">
+      <div class="container" align="center">
+        <form>
+          <input type="text" class="form-control" id="price" placeholder="Price"
+                 name="price" [(ngModel)]="lessonRequest.price">
 
-      <input type="text" class="form-control" id="price"  placeholder="Price"
-             name="price" [(ngModel)]="lessonRequest.price" >
+          <input type="date" class="form-control" id="date" placeholder="Date"
+                 name="place" [(ngModel)]="lessonRequest.date">
 
-      <input type="text" class="form-control" id="place" placeholder="Place"
-             name="place" [(ngModel)]="lessonRequest.place">
+          <input type="time" class="form-control" id="time" placeholder="Time"
+                 name="place" [(ngModel)]="lessonRequest.time">
 
-      <input type="date" class="form-control" id="date" placeholder="Date"
-             name="place" [(ngModel)]="lessonRequest.date">
+          <textarea type="text" class="form-control" id="message" placeholder="Message"
+                    name="message" rows="2" [(ngModel)]="lessonRequest.message"></textarea>
 
-      <input type="time" class="form-control" id="time" placeholder="Time"
-             name="place" [(ngModel)]="lessonRequest.time">
+          <div>
+            <button class="btn btn-link" value="Submit" (click)="sendRequest()">Save</button>
+          </div>
 
-      <textarea type="text" class="form-control" id="message" placeholder="Message"
-                name="message" rows="2" [(ngModel)]="lessonRequest.message"></textarea>
-      <div>
-        <button class="btn btn-link" value="Submit" (click)="sendRequest()">Save</button>
+        </form>
       </div>
 
-    </form>
+    </div>
+    <div class="col">
+      <app-map (nameUpdate)="setCoors($event)"></app-map>
+    </div>
   </div>
 </div>

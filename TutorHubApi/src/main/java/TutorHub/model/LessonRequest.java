@@ -1,4 +1,5 @@
 package TutorHub.model;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
@@ -10,16 +11,40 @@ public class LessonRequest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long requestID;
     private long pricePerHour;
-    private String place;
     private Date date;
     private Time time;
+    private String message;
+    private String studentID;
+    private String tutorID;
+    private String status;
+    private double lat;
+    private double lng;
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public void setLng(double lng) {
+        this.lng = lng;
+    }
+
+    public LessonRequest() {
+        status = LessonRequestStatus.New.toString();
+    }
 
     @Override
     public String toString() {
         return "LessonRequest{" +
                 "requestID=" + requestID +
                 ", pricePerHour=" + pricePerHour +
-                ", place='" + place + '\'' +
                 ", date=" + date +
                 ", time=" + time +
                 ", message='" + message + '\'' +
@@ -28,17 +53,6 @@ public class LessonRequest {
                 ", status='" + status + '\'' +
                 '}';
     }
-
-    private String message;
-    private String studentID;
-    private String tutorID;
-    private String status;
-
-
-    public LessonRequest() {
-        status = LessonRequestStatus.New.toString();
-    }
-
 
     public String getTutorID() {
         return tutorID;
@@ -76,13 +90,7 @@ public class LessonRequest {
         this.pricePerHour = pricePerHour;
     }
 
-    public String getPlace() {
-        return place;
-    }
 
-    public void setPlace(String place) {
-        this.place = place;
-    }
 
 
     public String getMessage() {

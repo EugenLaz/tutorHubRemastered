@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient, ɵangular_packages_common_http_http_a} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
 import {Time} from '@angular/common';
 import {LoginService} from '../../../service/login/login.service';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-lesson-request',
@@ -13,7 +14,8 @@ export class LessonRequestComponent implements OnInit {
 
   username = '';
   lessonRequest: LessonRequest = {
-    place: null,
+    lat: null,
+    lng: null,
     price: null,
     message: null,
     date: null,
@@ -21,6 +23,7 @@ export class LessonRequestComponent implements OnInit {
     tutorId: null,
     studentId: this.loginService.getLoggedInUserName()
   };
+
   constructor(private http: HttpClient, private route: ActivatedRoute,
               private loginService: LoginService) {
     this.username = this.route.snapshot.queryParamMap.get('username');
@@ -35,14 +38,19 @@ export class LessonRequestComponent implements OnInit {
         alert(res);
       });
   }
-
   ngOnInit(): void {
+  }
 
+  setCoors(coords: google.maps.LatLng) {
+    this.lessonRequest.lng = coords.lng();
+    this.lessonRequest.lat = coords.lat();
   }
 }
 
+
 export interface LessonRequest {
-  place: string;
+  lng: number;
+  lat: number;
   price: number;
   date: Date;
   time: Time;

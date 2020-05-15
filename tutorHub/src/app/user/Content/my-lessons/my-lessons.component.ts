@@ -54,7 +54,8 @@ export class MyLessonsComponent {
       const username = this.loginService.getLoggedInUserName();
       const params = new HttpParams().set('username', username);
       this.http.get<CalendarEvent[]>(url, {params}).pipe(
-        map(events => events.map(({ start, title}) =>
+        map(events => events.map(
+          ({ start, title}) =>
           ({ start: addHours(startOfDay(new Date(start.toString())), new Date(start.toString()).getHours()), title }))))
         .subscribe(events => {
           console.log(events);

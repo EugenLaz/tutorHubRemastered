@@ -28,6 +28,10 @@ import {TutorSearchPipe} from './service/filter-pipes/tutor-search.pipe';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { PaymentComponent } from './user/Content/payment/payment.component';
+import { MapComponent } from './user/Content/lesson-request/map/map.component';
+import {AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { RequestInfoComponent } from './user/Content/my-requests/request-info/request-info.component';
 
 const appRouts: Routes = [
   {path: 'welcome',
@@ -91,6 +95,8 @@ const appRouts: Routes = [
     MyRequestsComponent,
     MyLessonsComponent,
     PaymentComponent,
+    MapComponent,
+    RequestInfoComponent,
   ],
   imports: [
     RouterModule.forChild(appRouts),
@@ -110,7 +116,7 @@ const appRouts: Routes = [
     useClass: HttpInterceptorServiceService,
     multi: true
   }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }
